@@ -2,7 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Game</title>
+    <script>
+        var target_number = Math.random() * 100;
+        target_number = Math.floor(target_number);
+        var gamerunning = true;
+        while(gamerunning == true){
+            var user_input_text = prompt("What is your guess? \n\n [1-100]");
+            var user_input = parseInt(user_input_text);
+
+            if (user_input == target_number){
+                alert("You win.");
+                gamerunning = false;
+            }
+            else if (user_input < target_number){
+                alert("Guess higher.");
+
+            }
+            else if (user_input > target_number){
+                alert("Guess lower.");
+
+            }
+        }
+    </script>
 </head>
 <body>
 
